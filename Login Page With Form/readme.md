@@ -1,0 +1,1 @@
+Bu Çalışmada Form TextFormfield Globalkey ve validation konularına çalıştım ve bu konuları basit bir giriş ekranı yaparak pratik ettim.
