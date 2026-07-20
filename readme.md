@@ -1,0 +1,1 @@
+Bu Çalışmada Navigator ve Route işlemlerini Öğrendim. MaterialApp in initalRoute ve routes kavramlarını kullanarak sayfalar arası geçiş ve veri taşıma işlemlerini pratik ettim.
