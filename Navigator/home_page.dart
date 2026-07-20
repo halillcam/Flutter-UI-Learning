@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
     TextEditingController _nameController = TextEditingController();
     TextEditingController _surNameController = TextEditingController();
     final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+
     return Scaffold(
       body: Form(
         key: _formkey,
@@ -36,13 +37,17 @@ class HomePage extends StatelessWidget {
                         ElevatedButton(
                           child: Text("Gönder"),
                           onPressed: () {
-                            Navigator.of(context).pushNamed(
-                              "/detailPage",
-                              arguments: UserModel(
-                                name: _nameController.text,
-                                surname: _surNameController.text,
-                              ),
-                            );
+                            if (_formkey.currentState!.validate()) {
+                              Navigator.of(context).pushNamed(
+                                "/detailPage",
+                                arguments: UserModel(
+                                  name: _nameController.text,
+                                  surname: _surNameController.text,
+                                ),
+                              );
+                            } else {
+                              return;
+                            }
                           },
                         ),
                         SizedBox(height: 20),
